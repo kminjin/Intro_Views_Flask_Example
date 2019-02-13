@@ -1,11 +1,9 @@
 # Import statements necessary
 from flask import Flask, render_template
-from flask_script import Manager
 
 # Set up application
 app = Flask(__name__)
 
-manager = Manager(app)
 
 # Routes
 
@@ -31,4 +29,4 @@ def basic_values_list(name):
 
 
 if __name__ == '__main__':
-    manager.run() # Runs the flask server in a special way that makes it nice to debug
+    app.run()
