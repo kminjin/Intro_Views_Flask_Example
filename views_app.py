@@ -1,5 +1,5 @@
 # Import statements necessary
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_script import Manager
 
 # Set up application
@@ -7,7 +7,13 @@ app = Flask(__name__)
 
 manager = Manager(app)
 
+
+## Other functions
+
+# All the setup yay
+
 # Routes
+# INvoke setup functions and whatever in these route functions...
 
 @app.route('/')
 def hello_world():
