@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 # Routes
 
+
 @app.route('/')
 def hello_world():
     return '<h1>Hello World!</h1>'
@@ -18,13 +19,13 @@ def hello_name(yourname):
 @app.route('/showvalues/<name>')
 def basic_values_list(name):
     lst = ["hello","goodbye","tomorrow","many","words","jabberwocky"]
-    if len(name) > 3:
+    if len(name) > 4:
         longname = name
         shortname = None
     else:
         longname = None
         shortname = name
-    return render_template('values.html',word_list=lst,long_name=longname,short_name=shortname)
+    return render_template('values.html',word_list=lst,longname=longname,short_name=shortname)
 
 
 
